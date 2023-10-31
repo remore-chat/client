@@ -1,18 +1,18 @@
 {
-  "$schema": "..\\node_modules/@tauri-apps/cli\\schema.json",
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "npm run next-build && npm run next-export",
-    "beforeDevCommand": "npm run next dev",
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
     "devPath": "http://localhost:3000",
-    "distDir": "../dist"
+    "distDir": "../out"
   },
   "package": {
-    "productName": "nextauri",
+    "productName": "src-tauri",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": false
     },
     "bundle": {
       "active": true,
@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.das.dev",
+      "identifier": "com.tauri.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -55,12 +55,10 @@
     },
     "windows": [
       {
-        "transparent": false,
-        "decorations": true,
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "nextauri",
+        "title": "Remore",
         "width": 800
       }
     ]
